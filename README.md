@@ -1,3 +1,11 @@
+# This Fork
+This fork was taken of John Papa's repo to use in a short introduction to BDD and Cucumber with Angular.
+The major changes are the inclusion of Cucumber feature tests and the ability to run them using Protractor.
+
+## Changes made to get cucumber up and running
+* Install dependencies as per https://www.amadousall.com/angular-e2e-with-cucumber/
+    * `npm install --save @types/{chai,cucumber} chai cucumber protractor-cucumber-framework`
+* Update configuration to use cucumber instead of Jasmine
 # Getting Started
 
 Super simple Angular app with 1 module and 2 routes. This is a minor variation on the Tour of Heroes I wrote for the [official docs](https://angular.io/tutorial).
