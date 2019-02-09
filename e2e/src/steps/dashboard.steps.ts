@@ -15,7 +15,7 @@ Before(() => {
   dashboardPage = new DashboardPage();
 });
 
-Given(/^Dean is on the homepage$/, async () => {
+Given(/^Dean is on the dashboard$/, async () => {
     await appPage.navigateTo();
 });
 
@@ -27,26 +27,4 @@ Celeritas
 Magneta`);
 });
 
-Given(/^Narco is one of Deans heroes$/, async () => {
-    heroesPage.navigateTo();
-    expect(await heroesPage.doesHeroExist('Narco')).to.equal(true);
-});
 
-When('Dean deletes Narco', async () => {
-    (await heroesPage.clickHeroDeleteButtonByName('Narco'));
-});
-
-Then(/^Narco should not display on the dashboard$/, async ()  => {
-    heroesPage.navigateToDashboard();
-    // browser.ignoreSynchronization = false;
-    // browser.driver.sleep(2000);
-    // browser.ignoreSynchronization = true;
-    expect((await dashboardPage.getTopHeroes()))
-        .to
-        .equal(
-`Bombasto
-Celeritas
-Magneta
-RubberMan`
-        );
-});

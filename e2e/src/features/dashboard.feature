@@ -3,10 +3,5 @@ Feature: Dashboard
     top list of heroes.
 
     Scenario: List top heroes
-        Given Dean is on the homepage
+        Given Dean is on the dashboard
         Then Dean should see a list of his top 4 heroes
-
-    Scenario: Deleted heroes aren't displayed
-        Given Narco is one of Deans heroes
-        When Dean deletes Narco
-        Then Narco should not display on the dashboard
